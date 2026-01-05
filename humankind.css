@@ -1,0 +1,915 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #0f0f0f;
+  color: white;
+  padding: 10px 40px; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: auto;
+}
+
+
+.logo img {
+  display: block;
+  cursor: pointer;
+  height: 50px; 
+  width: auto;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; 
+}
+
+.nav-links a {
+  text-decoration:floralwhite;
+  color: white;
+  font-weight: 300;
+  font-size: 15px; 
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+
+
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.user-icon {
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.sign-up {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.sign-up:hover {
+  color: whitesmoke;
+}
+
+
+.buy-now {
+  background-color: whitesmoke;
+  color: #000;
+  border: none;
+  padding: 8px 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buy-now:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .buy-now {
+    padding: 7px 16px;
+  }
+}
+
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.center-image {
+  width: 350px; 
+  height: auto;
+  max-width: 80%;
+  margin-bottom: 25px;
+  transition: transform 0.4s ease;
+}
+
+.center-image:hover {
+  transform: scale(1.05);
+}
+
+
+.hero-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+  .center-image {
+    width: 250px;
+  }
+
+  .hero-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+
+.video-gallery {
+  background-color: #0d1422;
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 80px;
+}
+
+
+.gallery-header {
+  margin-bottom: 60px;
+}
+
+.gallery-title {
+  width: 280px;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+.video-item video {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+
+.video-desc {
+  font-size: 15px;
+  color: #cccccc;
+  margin-bottom: 6px;
+}
+
+.video-strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+
+@media (max-width: 1200px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .video-item video {
+    height: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .video-item video {
+    height: 200px;
+  }
+}
+
+
+.sec1 {
+  background-color: #0d1422;
+  color: #ffffff;
+  padding: 100px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-l {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  max-width: 1300px;
+  width: 100%;
+}
+
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-content p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #dcdcdc;
+}
+
+.text-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.text-content li {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #bdbdbd;
+}
+
+.buy-btn {
+  padding: 12px 28px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #ffffff;
+  color: #0d1422;
+  transform: scale(1.05);
+}
+
+
+
+.sec-img {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sec-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.sec-img img:hover {
+  transform: scale(1.03);
+}
+
+
+@media (max-width: 1000px) {
+  .buy-l {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    order: 2;
+  }
+
+  .sec-img {
+    order: 1;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .text-content h1 {
+    font-size: 30px;
+  }
+
+  .text-content ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .text-content li::before {
+    content: "• ";
+    color: #ffffff;
+  }
+}
+.partner-section {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.partner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://cdn.sega.co.uk/humankind-game/public/styles/1600/public/content/media/bg/image/second-promo-landscape.jpg?VersionId=9CTwOKa0LLS8WfssBCPlR9khrmCi8Em3&itok=iN7a66Oj'); /* add your bg image here */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  filter: brightness(0.5); /
+}
+
+.partner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.partner-img {
+  width: 400px; 
+  height: auto;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.partner-text {
+  max-width: 400px; 
+}
+
+
+.partner-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.partner-text h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.partner-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.partner-text p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.sign-up-btn {
+  background-color: white;
+  color:black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.sign-up-btn:hover {
+  background-color: transparent;
+}
+
+
+@media (max-width: 768px) {
+  .partner-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .partner-img {
+    margin-bottom: 20px;
+  }
+
+  .partner-text h1 {
+    font-size: 28px;
+  }
+
+  .partner-text h2 {
+    font-size: 20px;
+  }
+}
+
+ .anime{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://cdn.sega.co.uk/humankind-game/public/styles/1600/public/content/media/bg/image/quote_bg.jpg?VersionId=6WLCQHMf.V5zlZf7861yHzFKqEJQ20qn&itok=EAvqfyl3);
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+}
+
+.anm1, .anm2, .anm3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    max-width: 80%;
+    padding: 20px;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.anm1 {
+    animation-name: fadeInOut1;
+}
+
+.anm2 {
+    animation-name: fadeInOut2;
+}
+
+.anm3 {
+    animation-name: fadeInOut3;
+}
+
+
+@keyframes fadeInOut1 {
+    0% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeInOut2 {
+    0% { opacity: 0; }
+    30% { opacity: 0; }
+    40% { opacity: 1; }
+    60% { opacity: 1; }
+    70% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeInOut3 {
+    0% { opacity: 0; }
+    60% { opacity: 0; }
+    70% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.anm1 h1, .anm2 h1, .anm3 h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.anm1 p, .anm2 p, .anm3 p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+
+.anime:hover .anm1,
+.anime:hover .anm2,
+.anime:hover .anm3 {
+    animation-play-state: paused;
+}
+
+
+@media (max-width: 768px) {
+    .anm1 h1, .anm2 h1, .anm3 h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .anm1 p, .anm2 p, .anm3 p {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+}
+   .media-page {
+  background-color: #0d1422;
+  color: #fff;
+  padding: 80px 10%;
+  min-height: 100vh;
+}
+
+.media-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.media-intro {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.media-text {
+  max-width: 400px;
+  text-align: right;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.media-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.images-btn, .videos-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+.parent{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0% 200px;
+}
+.group1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.group2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    border-radius: 10px;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .media-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .media-text {
+    text-align: center;
+    max-width: 90%;
+  }
+  .media-buttons {
+    justify-content: center;
+  }
+}
+
+.collab-section {
+  background: url('https://cdn.sega.co.uk/humankind-game/public/styles/1600/public/content/media/bg/image/G2G-Background.jpg?VersionId=zwMCcUzGQJMDjtF4wRZbVeh5LhmtBOdZ&itok=RQ2y4fuN') no-repeat center/cover;
+  padding: 100px 10%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.collab-content {
+  max-width: 500px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.collab-logo {
+  width: 140px;
+  height: auto;
+}
+
+.collab-intro {
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.collab-text {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.collab-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  width: fit-content;
+  transition: transform 0.3s ease;
+}
+
+.collab-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.collab-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+  .collab-section {
+    padding: 60px 5%;
+  }
+  
+  .collab-content {
+    max-width: 100%;
+    text-align: left;
+  }
+  
+  .collab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.footer {
+  background-color: #13223f;
+  color: #fff;
+  padding: 60px 8%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 60px;
+  object-fit: contain;
+}
+
+
+.footer-line {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 30px 40px;
+}
+
+
+.footer-text {
+  color: #ccc;
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 25px;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.footer-icons img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+
+.privacy-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.privacy-btn {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.privacy-btn:hover {
+  background-color: #fff;
+  color: #13223f;
+}
+
+.privacy-section p {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.privacy-section a {
+  color: #80aaff;
+  text-decoration: none;
+}
+
+.privacy-section a:hover {
+  text-decoration: underline;
+}
+
+
+.rating-box {
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.rating-box img {
+  width: 60px;
+  height: auto;
+}
+
+.rating-box p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 5%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-size: 10px;
+  }
+
+  .rating-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
